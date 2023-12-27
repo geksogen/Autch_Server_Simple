@@ -8,8 +8,8 @@ Stand for demonstrating authentication mechanics, autorisation on jwt token.
 ```BASH
 git clone https://github.com/geksogen/Autch_Server_Simple
 cd /Autch_Server_Simple/Client
-sudo docker build -t Client:1 .
-sudo docker run --rm -d --name Client --network=host Client:1
+sudo docker build -t Client .
+sudo docker run --rm -d -p 5000:5000  Client
 ```
 
 ### Clear

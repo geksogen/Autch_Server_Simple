@@ -12,10 +12,11 @@ FROM python:3.9-slim
 COPY --from=builder /opt/venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
-WORKDIR /code
-COPY ./requirements.txt /code/requirements.txt
-COPY ./app /code/app
-RUN pip install -r /code/requirements.txt
+WORKDIR /app
+COPY ./requirements.txt /app
+RUN pip install -r requirements.txt
+COPY . .
+RUN pip install -r requirements.txt
 EXPOSE 5000
-ENV FLASK_APP=my_flask.py
+ENV FLASK_APP=client.py
 CMD ["flask", "run", "--host", "0.0.0.0"]
