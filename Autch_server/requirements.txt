@@ -1,0 +1,8 @@
+requests
+flask
+urllib
+auth
+base64
+time
+cryptography
+PyJWT == 1.7.1
