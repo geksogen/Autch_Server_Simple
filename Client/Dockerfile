@@ -3,7 +3,7 @@ FROM python:3.12-alpine as builder
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-RUN apt-get update
+
 RUN python -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
@@ -14,9 +14,9 @@ ENV PATH="/opt/venv/bin:$PATH"
 
 WORKDIR /app
 COPY ./requirements.txt /app
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 COPY . .
-RUN pip install -r requirements.txt
 EXPOSE 5000
 ENV FLASK_APP=client.py
 CMD ["flask", "run", "--host", "0.0.0.0"]
