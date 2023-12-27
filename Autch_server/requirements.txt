@@ -1,6 +1,6 @@
 requests
 flask
-urllib
+urllib3
 auth
 base64
 time
