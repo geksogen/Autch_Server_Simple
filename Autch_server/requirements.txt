@@ -3,6 +3,6 @@ flask
 urllib3
 auth
 pybase64
-time
+times
 cryptography
 PyJWT == 1.7.1
