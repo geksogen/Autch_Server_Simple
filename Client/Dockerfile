@@ -1,5 +1,5 @@
 # temp stage
-FROM python:3.9-slim as builder
+FROM python:3.12-alpine as builder
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
@@ -8,7 +8,7 @@ RUN python -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
 # final stag
-FROM python:3.9-slim
+FROM python:3.12-alpine
 COPY --from=builder /opt/venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
