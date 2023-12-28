@@ -1,5 +1,3 @@
-cd ~
-git clone https://github.com/geksogen/Autch_Server_Simple
 cd Autch_Server_Simple/Client/
 sudo docker build -t client:1 .
 sudo docker run --rm -d --name client_my --network=host client:1
