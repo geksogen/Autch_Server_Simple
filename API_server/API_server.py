@@ -1,4 +1,5 @@
 import json
+import os
 #import ssl
 
 from auth import verify_access_token
@@ -44,4 +45,4 @@ if __name__ == '__main__':
   #context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
   #context.load_cert_chain('domain.crt', 'domain.key')
   #app.run(port = 5000, debug = True, ssl_context = context)
-  app.run(port = 5002, debug = True)
+  app.run(debug = True, host = '0.0.0.0', port = int(os.environ.get('PORT', 5002)))
