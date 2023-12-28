@@ -24,6 +24,14 @@ sudo docker build -t auth_server:1 .
 sudo docker run --rm -d --name autch_server_my --network=host auth_server:1
 ```
 
+### API Server
+```BASH
+git clone https://github.com/geksogen/Autch_Server_Simple
+cd Autch_Server_Simple/API_server/
+sudo docker build -t api_server:1 .
+sudo docker run --rm -d --name api_server_my --network=host api_server:1
+```
+
 ### Clear
 ```BASH
 sudo docker stop $(sudo docker ps -aq)
