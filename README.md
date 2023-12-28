@@ -35,6 +35,6 @@ sudo docker run --rm -d --name api_server_my --network=host api_server:1
 ### Clear
 ```BASH
 sudo docker stop $(sudo docker ps -aq)
-sudo docker rm $(sudo docker ps -aq)
+#sudo docker rm $(sudo docker ps -aq)
 sudo docker rmi $(sudo docker images -q)
 ```
