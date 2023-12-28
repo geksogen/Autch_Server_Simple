@@ -25,7 +25,7 @@ sudo docker run --rm -d -p 5001:5001 auth_server:1
 
 ### Clear
 ```BASH
-sudo docker stop $(sudo docker ps -aq) \
-sudo docker rm $(sudo docker ps -aq) \
+sudo docker stop $(sudo docker ps -aq)
+sudo docker rm $(sudo docker ps -aq)
 sudo docker rmi $(sudo docker images -q)
 ```
