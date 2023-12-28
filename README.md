@@ -15,7 +15,7 @@ cd Autch_Server_Simple/Client/
 #gunicorn --bind 0.0.0.0:5000 wsgi:app
 sudo docker build -t client:1 .
 #sudo docker run --rm -d -p 5000:5000 client:1
-sudo docker run --rm -d --name client_my client:1
+sudo docker run --rm -d --name client_my --network=host client:1
 ```
 ### Auth Server
 ```BASH

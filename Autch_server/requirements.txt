@@ -6,3 +6,4 @@ pybase64
 times
 cryptography
 PyJWT == 1.7.1
+gunicorn
