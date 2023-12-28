@@ -1,4 +1,4 @@
-cd /Client/
+cd Client/
 sudo docker build -t client:1 .
 sudo docker run --rm -d --name client_my --network=host client:1
 
