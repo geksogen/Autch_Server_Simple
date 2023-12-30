@@ -10,4 +10,4 @@ cd ../API_server/
 sudo docker build -t api_server:1 .
 sudo docker run --rm -d --name api_server_my --network=host api_server:1
 
-docker ps:
+docker ps
