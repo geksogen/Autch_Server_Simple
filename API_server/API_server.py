@@ -1,4 +1,4 @@
-import json
+import jsons
 import os
 #import ssl
 
@@ -15,7 +15,7 @@ def get_user():
   # Checks if the access token is present and valid.
   auth_header = request.headers.get('Authorization')
   if 'Bearer' not in auth_header:
-    return json.dumps({
+    return jsons.dumps({
       'error': 'Access token does not exist.'
     }), 400
 
@@ -29,11 +29,11 @@ def get_user():
               { 'username': 'Jane Doe', 'email': 'janedoe@example.com'},
               { 'username': 'John Doe', 'email': 'johndoe@example.com'}
             ]
-    return json.dumps({
+    return jsons.dumps({
               'results': users
             })
   else:
-    return json.dumps({
+    return jsons.dumps({
       'error': 'Access token is invalid.'
     }), 400
 

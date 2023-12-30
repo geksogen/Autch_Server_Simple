@@ -7,5 +7,4 @@ times
 cryptography
 PyJWT == 1.7.1
 gunicorn
-os
-json
+jsons
