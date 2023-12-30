@@ -17,4 +17,5 @@ COPY ./requirements.txt /app
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 COPY . .
+EXPOSE 5002
 CMD ["gunicorn", "--bind", "0.0.0.0:5002", "wsgi:app"]
