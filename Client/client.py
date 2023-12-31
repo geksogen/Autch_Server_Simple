@@ -6,10 +6,10 @@ import os
 from flask import (Flask, make_response, render_template, redirect, request,
                    url_for)
 
-AUTH_PATH = 'http://51.250.78.93:5001/auth'
-TOKEN_PATH = 'http://51.250.78.93:5001/token'
-RES_PATH = 'http://51.250.78.93:5002/users'
-REDIRECT_URL = 'http://51.250.78.93:5000/callback'
+AUTH_PATH = 'http://0.0.0.0:5001/auth'
+TOKEN_PATH = 'http://0.0.0.0:5001/token'
+RES_PATH = 'http://0.0.0.0:5002/users'
+REDIRECT_URL = 'http://0.0.0.0:5000/callback'
 
 CLIENT_ID = 'sample-client-id'
 CLIENT_SECRET = 'sample-client-secret'
@@ -88,4 +88,5 @@ if __name__ == '__main__':
   #context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
   #context.load_cert_chain('domain.crt', 'domain.key')
   #app.run(port = 5000, debug = True, ssl_context = context)
-  app.run(debug = True, host = '0.0.0.0', port = int(os.environ.get('PORT', 5000)))
+  #app.run(debug = True, host = '0.0.0.0', port = int(os.environ.get('PORT', 5000)))
+  app.run(debug=True, host='0.0.0.0')
