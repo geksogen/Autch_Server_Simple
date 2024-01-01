@@ -17,6 +17,6 @@ COPY ./requirements.txt /app
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 COPY . .
-ENTRYPOINT ['python']
+ENTRYPOINT ['python3']
 CMD ['client.py']
 EXPOSE 5000
