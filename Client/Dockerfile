@@ -10,7 +10,7 @@ ENV PATH="/opt/venv/bin:$PATH"
 FROM python:latest
 WORKDIR /app
 ADD requirements.txt client.py ./
-COPY ./templates ./
+ADD templates ./
 RUN pip install -r requirements.txt
 ENTRYPOINT ["python"]
 CMD ["client.py"]
