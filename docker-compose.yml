@@ -2,6 +2,7 @@ version: "3.4"
 
 services:
   client:
+    image: autch_server_simple_client:latest
     container_name: client
     ports:
       - 5000:5000
