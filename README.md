@@ -11,6 +11,10 @@ Stand for demonstrating authentication mechanics, autorisation on jwt token.
 ```BASH
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
+
+docker-compose build --build-arg client
+docker-compose up -d client
+
 ```
 
 ### Client
@@ -44,4 +48,6 @@ sudo docker run --rm -d --name api_server_my --network=host api_server:1
 sudo docker stop $(sudo docker ps -aq)
 sudo docker rm $(sudo docker ps -aq)
 sudo docker rmi $(sudo docker images -q)
+docker network prune
+docker-compose down --rmi all -v --remove-orphans
 ```
