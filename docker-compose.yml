@@ -1,0 +1,17 @@
+version: "3.4"
+
+services:
+  client:
+    container_name: client
+    ports:
+      - 5000:5000
+    networks:
+      - test
+    build:
+      context: ./Client
+      dockerfile: Dockerfile
+    restart: always
+
+networks:
+  test:
+    driver: bridge

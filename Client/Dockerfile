@@ -8,7 +8,7 @@ RUN python -m venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
 # final stag
-FROM python:3.12-alpine
+FROM python:latest
 COPY --from=builder /opt/venv /opt/venv
 ENV PATH="/opt/venv/bin:$PATH"
 
@@ -17,5 +17,6 @@ COPY ./requirements.txt /app
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 COPY . .
-ENTRYPOINT ['python3']
+ENTRYPOINT ['python']
 CMD ['client.py']
+EXPOSE 5000
