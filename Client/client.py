@@ -6,10 +6,10 @@ import os
 from flask import (Flask, make_response, render_template, redirect, request,
                    url_for)
 
-AUTH_PATH = 'http://0.0.0.0:5001/auth'
-TOKEN_PATH = 'http://0.0.0.0:5001/token'
-RES_PATH = 'http://0.0.0.0:5002/users'
-REDIRECT_URL = 'http://0.0.0.0:5000/callback'
+AUTH_PATH = 'http://127.0.0.1:5001/auth'
+TOKEN_PATH = 'http://127.0.0.1:5001/token'
+RES_PATH = 'http://127.0.0.1:5002/users'
+REDIRECT_URL = 'http://127.0.0.15000/callback'
 
 CLIENT_ID = 'sample-client-id'
 CLIENT_SECRET = 'sample-client-secret'
