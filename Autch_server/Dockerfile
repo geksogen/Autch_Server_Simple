@@ -10,7 +10,7 @@ ENV PATH="/opt/venv/bin:$PATH"
 FROM python:latest
 WORKDIR /app
 WORKDIR /templates
-ADD requirements.txt auth_server.py ./
+ADD requirements.txt auth_server.py auth_server.py ./
 ADD templates ./templates
 RUN pip install -r requirements.txt
 ENTRYPOINT ["python"]
