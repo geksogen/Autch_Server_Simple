@@ -1,2 +1,1 @@
-sudo docker stop $(sudo docker ps -aq)
-sudo docker rmi $(sudo docker images -q)
+docker-compose down --rmi all -v --remove-orphans

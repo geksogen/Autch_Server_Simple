@@ -1,13 +1,7 @@
-cd Client/
-sudo docker build -t client:1 .
-sudo docker run --rm -d --name client_my --network=host client:1
-
-cd ../Autch_server/
-sudo docker build -t auth_server:1 .
-sudo docker run --rm -d --name autch_server_my --network=host auth_server:1
-
-cd ../API_server/
-sudo docker build -t api_server:1 .
-sudo docker run --rm -d --name api_server_my --network=host api_server:1
-
-docker ps
+docker-compose build --build-arg client
+docker-compose build --build-arg autch_server
+docker-compose build --build-arg api_server
+docker-compose up -d client
+docker-compose up -d autch_server
+docker-compose up -d api_server
+docker-compose ps
