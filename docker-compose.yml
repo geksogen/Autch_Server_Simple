@@ -13,6 +13,18 @@ services:
       dockerfile: Dockerfile
     restart: always
 
+  autch_server:
+    image: autch_server_simple:latest
+    container_name: client
+    ports:
+      - 5001:5001
+    networks:
+      - test
+    build:
+      context: ./Autch_server
+      dockerfile: Dockerfile
+    restart: always
+
 networks:
   test:
     driver: bridge

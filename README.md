@@ -13,7 +13,8 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 docker-compose build --build-arg client
-docker-compose up -d client
+docker-compose build --build-arg autch_server
+docker-compose up -d
 
 ```
 
