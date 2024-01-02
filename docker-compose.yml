@@ -25,6 +25,6 @@ services:
       dockerfile: Dockerfile
     restart: always
 
-networks:
-  test:
-    driver: bridge
+#networks:
+#  test:
+#    driver: bridge
