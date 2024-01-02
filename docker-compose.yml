@@ -6,8 +6,8 @@ services:
     container_name: client
     ports:
       - 5000:5000
-    #networks:
-    #  - test
+    networks:
+      - test
     build:
       context: ./Client
       dockerfile: Dockerfile
@@ -18,13 +18,13 @@ services:
     container_name: autch_server
     ports:
       - 5001:5001
-    #networks:
-    #  - test
+    networks:
+      - test
     build:
       context: ./Autch_server
       dockerfile: Dockerfile
     restart: always
 
-#networks:
-#  test:
-#    driver: bridge
+networks:
+  test:
+    driver: bridge
