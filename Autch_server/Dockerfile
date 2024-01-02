@@ -15,5 +15,5 @@ ADD templates ./templates
 RUN pip install -r requirements.txt
 ENTRYPOINT ["python"]
 CMD ["auth_server.py"]
-EXPOSE 5002
+EXPOSE 5001
 
