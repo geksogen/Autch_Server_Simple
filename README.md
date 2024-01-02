@@ -14,7 +14,8 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 docker-compose build --build-arg client
 docker-compose build --build-arg autch_server
-docker-compose up -d
+docker-compose up -d client
+docker-compose up -d autch_server
 
 ```
 

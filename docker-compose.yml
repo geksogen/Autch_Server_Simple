@@ -15,7 +15,7 @@ services:
 
   autch_server:
     image: autch_server_simple:latest
-    container_name: client
+    container_name: autch_server
     ports:
       - 5001:5001
     networks:
