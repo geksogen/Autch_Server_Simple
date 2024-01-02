@@ -12,6 +12,7 @@ WORKDIR /app
 WORKDIR /templates
 ADD requirements.txt auth_server.py ./
 ADD auth.py ./
+ADD private.pem ./
 ADD templates ./templates
 RUN pip install -r requirements.txt
 ENTRYPOINT ["python"]
