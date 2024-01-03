@@ -9,7 +9,7 @@ from flask import (Flask, make_response, render_template, redirect, request,
 AUTH_PATH = 'http://158.160.111.120:5001/auth'
 TOKEN_PATH = 'http://158.160.111.120:5001/token'
 RES_PATH = 'http://158.160.111.120:5002/users'
-REDIRECT_URL = 'http://158.160.111.1205:5000/callback'
+REDIRECT_URL = 'http://158.160.111.120:5000/callback'
 
 CLIENT_ID = 'sample-client-id'
 CLIENT_SECRET = 'sample-client-secret'
