@@ -22,7 +22,7 @@ def get_user():
   access_token = auth_header[7:]
 
   #print(auth_header)
-  #print(access_token)
+  print(access_token)
 
   if access_token and verify_access_token(access_token):
     users = [
