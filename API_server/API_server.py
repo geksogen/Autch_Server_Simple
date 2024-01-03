@@ -27,7 +27,7 @@ def get_user():
   if access_token and verify_access_token(access_token):
     users = [
               { 'username': 'Jane Doe', 'email': 'janedoe@example.com'},
-              { 'access_tocken': 'access_token', 'auth_header': 'auth_header'}
+              { 'access_tocken': access_token, 'auth_header': auth_header}
             ]
     return jsons.dumps({
               'results': users
